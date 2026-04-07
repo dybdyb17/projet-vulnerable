@@ -29,6 +29,6 @@ class UserRepository
         $stmt->execute(['email' => $email]);
 
         $user = $stmt->fetch();
-        return $user;
+        return $user ?: null;
     }
 }
